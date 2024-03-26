@@ -1,7 +1,8 @@
+-- TSInstall lua and then uncomment all
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   -- Use :TSInstallInfo to se w
-  ensure_installed = { "c", "cpp" ,"lua", "vim", "vimdoc", "query", "python", "latex", "verilog", "bash", "markdown", "markdown_inline"},
+  ensure_installed = {"lua", "python", "latex", "verilog", "bash", "markdown", "c", "cpp"},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -19,4 +20,3 @@ require('nvim-treesitter.configs').setup {
     additional_vim_regex_highlighting = false,
   },
 }
-
