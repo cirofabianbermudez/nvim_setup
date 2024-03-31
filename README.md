@@ -137,6 +137,14 @@ Open Neovim and let lazy.nvim install all the plugins:
 nvim
 ```
 
+## Spell check
+
+Inside this repository there is a `spell` directory that contains the `*.spl` and `.sug` files for English and Spanish in case you experience some problems while running the `setlocal spell spelllang=es` vim command.
+
+## Other GUI
+
+A `ginit.vim` file is provided in case you want to use the default nvim-qt.exe GUI. Also a `neovide.lua` file is provided in case you are [Neovide](https://neovide.dev/) user. In both cases the font configuration and zoom capabilities are enable. You can delete them if you like.
+
 ## File tree
 
 This is the current file tree of the project:
@@ -174,14 +182,6 @@ This is the current file tree of the project:
     ├── es.utf-8.spl
     └── es.utf-8.sug
 ```
-
-## Spell check
-
-Inside this repository there is a `spell` directory that contains the `*.spl` and `.sug` files for English and Spanish in case you experience some problems while running the `setlocal spell spelllang=es` vim command.
-
-## Other GUI
-
-A `ginit.vim` file is provided in case you want to use the default nvim-qt.exe GUI. Also a `neovide.lua` file is provided in case you are [Neovide](https://neovide.dev/) user. In both cases the font configuration and zoom capabilities are enable. You can delete them if you like.
 
 ## Project status
 
