@@ -10,7 +10,7 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', opt)
 vim.keymap.set('n', '<leader>q', ':q<CR>', opt)
 
 -- Easy yank all or delete all
-vim.keymap.set('n', '<leader>gg', ':%y+<CR>', opt)
+vim.keymap.set('n', '<leader>gy', ':%y+<CR>', opt)
 vim.keymap.set('n', '<leader>gd', ':%y+ | %d<CR>', opt)
 vim.keymap.set('n', 'Y', 'y$', opt)
 
@@ -21,12 +21,6 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', opt)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opt)
 
 -- Easy motion if wrap lines
-vim.keymap.set('n', '<A-j>', 'gj', opt)
-vim.keymap.set('n', '<A-k>', 'gk', opt)
-vim.keymap.set('n', '<A-h>', 'h', opt)
-vim.keymap.set('n', '<A-l>', 'l', opt)
-
--- Vertical and horizantal movement when wrap is enable
 vim.keymap.set('n', '<A-j>', 'gj', opt)
 vim.keymap.set('n', '<A-k>', 'gk', opt)
 vim.keymap.set('n', '<A-h>', 'h', opt)
