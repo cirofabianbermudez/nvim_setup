@@ -13,6 +13,7 @@ vim.keymap.set('n', '<leader>q', ':q<CR>', opt)
 vim.keymap.set('n', '<leader>gy', ':%y+<CR>', opt)
 vim.keymap.set('n', '<leader>gd', ':%y+ | %d<CR>', opt)
 vim.keymap.set('n', 'Y', 'y$', opt)
+vim.keymap.set("n", "<leader>Y", "_v$<left>\"+y")
 
 -- tmux-navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h', opt)

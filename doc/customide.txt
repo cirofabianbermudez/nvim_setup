@@ -1,3 +1,5 @@
+*custumide.txt*	 Personal IDE using Neovim and awesome plugins
+
 ================================================================================
 INTRODUCTION                                                   *customide.intro*
 
@@ -126,6 +128,9 @@ This are my personal notes about how to use vim.
 
     {v}              (normal)   Enter Visual mode
     {<Ctrl>+v}       (normal)   Enter Visual-Block mode
+
+Note:
+  Create the tags file using `:helptags ../doc`
 
 ================================================================================
 vim:tw=80:ts=2:ft=help:norl:syntax=help:
