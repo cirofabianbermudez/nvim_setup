@@ -93,6 +93,15 @@ sudo apt-get install gcc
 
 Usually this step is optional because most Linux distributions already comes with a C compiler.
 
+If you are using WSL, sometimes it does not come with a clipboard manager installed, you can install one with:
+
+```bash
+sudo apt-get install xclip
+```
+
+this allows to copy and paste outside Neovim.
+
+
 ## Fonts
 
 For Windows you can install the font with the following command:
@@ -114,10 +123,8 @@ rm ~/.fonts/Hack.zip
 
 In both cases you have to to select the font Hack Nerd Font Mono in the Terminal settings.
 
-
 > [!NOTE]  
 > If you want to install the fonts manually there is a `fonts` directory in this repository containing a `Hack.zip` file. For Windows you can decompress and install the font as any other. For Linux you have to create a `~/.fonts` directory and put the fonts there and restart the terminal. 
-
 
 Finally clone the repository in `C:\Users\username\AppData\Local\nvim` for Windows or in `/home/bermudez/.config/nvim` for Linux:
 
