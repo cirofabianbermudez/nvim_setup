@@ -137,6 +137,44 @@ Open Neovim and let lazy.nvim install all the plugins:
 nvim
 ```
 
+## File tree
+
+This is the current file tree of the project:
+
+```bash
+├── README.md
+├── after
+│   └── plugin
+│       ├── barbar.lua
+│       ├── colorscheme.lua
+│       ├── lualine.lua
+│       ├── neoviode.lua
+│       ├── oil.lua
+│       ├── telescope.lua
+│       └── treesitter.lua
+├── doc
+│   ├── customide.txt
+│   ├── git_cheatsheet.txt
+│   └── tags
+├── fonts
+│   └── Hack.zip
+├── ginit.vim
+├── init.lua
+├── lazy-lock.json
+├── lua
+│   └── core
+│       ├── init.lua
+│       ├── lazy.lua
+│       ├── markdown.lua
+│       ├── remap.lua
+│       └── set.lua
+└── spell
+    ├── en.utf-8.spl
+    ├── en.utf-8.sug
+    ├── es.utf-8.spl
+    └── es.utf-8.sug
+```
+
 ## Spell check
 
 Inside this repository there is a `spell` directory that contains the `*.spl` and `.sug` files for English and Spanish in case you experience some problems while running the `setlocal spell spelllang=es` vim command.
