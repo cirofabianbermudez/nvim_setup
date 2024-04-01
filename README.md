@@ -150,7 +150,7 @@ Inside this repository there is a `spell` directory that contains the `*.spl` an
 
 ## Other GUI
 
-A `ginit.vim` file is provided in case you want to use the default nvim-qt.exe GUI. Also a `neovide.lua` file is provided in case you are [Neovide](https://neovide.dev/) user. In both cases the font configuration and zoom capabilities are enable. You can delete them if you like.
+If you are a [Neovide](https://neovide.dev/) user there is a `neovide.lua` file that selects the font and enables zoom capabilities.
 
 ## File tree
 
@@ -173,7 +173,6 @@ This is the current file tree of the project:
 │   └── tags
 ├── fonts
 │   └── Hack.zip
-├── ginit.vim
 ├── init.lua
 ├── lazy-lock.json
 ├── lua
