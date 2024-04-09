@@ -31,6 +31,9 @@ vim.keymap.set('n', '<A-l>', 'l', opt)
 vim.keymap.set('n', '<leader>0', ":e | :echo expand('%:p')<CR>", opt)
 vim.keymap.set('n', '<leader>h', ":!start explorer /select,%:p<CR><CR>", {silent = true})
 
+-- See file current path
+vim.keymap.set('n', '<leader>?', ":echo expand('%:p')<CR>", opt)
+
 -- Easy move between buffers
 vim.keymap.set('n', '<leader>o', ':bn<CR>')
 vim.keymap.set('n', '<leader>i', ':bp<CR>')
