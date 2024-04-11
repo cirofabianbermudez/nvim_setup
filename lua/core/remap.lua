@@ -39,6 +39,10 @@ vim.keymap.set('n', '<leader>o', ':bn<CR>')
 vim.keymap.set('n', '<leader>i', ':bp<CR>')
 vim.keymap.set('n', '<leader>c', ':bd<CR>')
 
+-- Easy move between tabs
+vim.keymap.set('n', '<leader>O', ':tabnext<CR>')
+vim.keymap.set('n', '<leader>I', ':tabprevious<CR>')
+
 --  Normal tab function
 vim.keymap.set("x", "<Tab>", ">", opt)
 vim.keymap.set("x", "<S-Tab>", "<", opt)
