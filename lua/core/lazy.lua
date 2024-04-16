@@ -22,8 +22,10 @@ local plugins = {
   },
   'stevearc/oil.nvim',
   -- Optional
-  'nvim-lualine/lualine.nvim'
-  -- 'nvim-tree/nvim-web-devicons',
+  'nvim-lualine/lualine.nvim',
+  'nvim-tree/nvim-web-devicons',
+  'lewis6991/gitsigns.nvim',
+  'romgrk/barbar.nvim',
   -- 'Yggdroot/indentLine',
 }
 

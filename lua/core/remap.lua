@@ -37,7 +37,7 @@ vim.keymap.set('n', '<leader>?', ":echo expand('%:p')<CR>", opt)
 -- Easy move between buffers
 vim.keymap.set('n', '<leader>o', ':bn<CR>')
 vim.keymap.set('n', '<leader>i', ':bp<CR>')
-vim.keymap.set('n', '<leader>c', ':bd<CR>')
+-- vim.keymap.set('n', '<leader>c', ':bd<CR>')
 
 -- Easy move between tabs
 vim.keymap.set('n', '<leader>O', ':tabnext<CR>')
