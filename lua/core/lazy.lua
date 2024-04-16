@@ -15,6 +15,7 @@ local plugins = {
   -- Colorschemes
   'catppuccin/nvim',
   'rose-pine/neovim',
+  'folke/tokyonight.nvim',
   -- IDE
   'nvim-treesitter/nvim-treesitter',
   { 'nvim-telescope/telescope.nvim', tag = '0.1.6',
@@ -31,3 +32,4 @@ local plugins = {
 
 local opts = {}
 require("lazy").setup(plugins, opts)
+

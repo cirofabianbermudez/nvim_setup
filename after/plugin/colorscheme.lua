@@ -1,9 +1,10 @@
 local flavors = {
   'catppuccin',
   'rose-pine',
+  'tokyonight',
 }
 
-local theme = flavors[2]
+local theme = flavors[3]
 
 -- rose-pine configuration
 if (theme == 'rose-pine') then
@@ -23,6 +24,18 @@ if (theme == 'catppuccin') then
     no_italic = true,
     no_bold = true,
     no_underline = true,
+  })
+end
+
+-- catppucin configuration
+if (theme == 'tokyonight') then
+  require('tokyonight').setup({
+    style = "moon",
+    styles = {
+      comments = { italic = false },
+      keywords = { italic = false },
+    },
+
   })
 end
 
