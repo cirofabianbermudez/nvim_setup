@@ -189,6 +189,38 @@ This is the current file tree of the project:
     └── es.utf-8.sug
 ```
 
+## Extras
+
+### Installing and Upgrading Powershell
+
+Search for the latest version of [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4)
+```powershell
+winget search Microsoft.PowerShell
+```
+
+Install PowerShell
+```powershell
+winget install --id Microsoft.Powershell --source winget
+```
+
+Upgrading an existing installation
+```powershell
+winget list --name PowerShell --upgrade-available
+```
+
+### Formaters
+
+[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
+
+```bash
+scoop install 
+scoop install mingw-winlibs-llvm-ucrt
+```
+
+[Verible](https://github.com/chipsalliance/verible)
+[Stylua](https://github.com/JohnnyMorganz/StyLua)
+
+
 ## Project status
 
 - [x] This configuration was tested on a Windows 10/11 machine using [Powershell](https://github.com/PowerShell/PowerShell) and [Terminal](https://github.com/microsoft/terminal).

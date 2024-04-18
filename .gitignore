@@ -2,3 +2,6 @@
 plugin/packer_compiled.lua
 *.bak
 lazy-lock.json
+test.lua
+test.cpp
+.temp
