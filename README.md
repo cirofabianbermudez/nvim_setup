@@ -217,8 +217,14 @@ scoop install
 scoop install mingw-winlibs-llvm-ucrt
 ```
 
+
 [Verible](https://github.com/chipsalliance/verible)
+
+
 [Stylua](https://github.com/JohnnyMorganz/StyLua)
+
+
+Do not forget to put the executable in the PATH or System Environment Variables on Windows.
 
 
 ## Project status
