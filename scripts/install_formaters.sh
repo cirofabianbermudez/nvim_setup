@@ -10,6 +10,3 @@ wget https://github.com/chipsalliance/verible/releases/download/v0.0-3638-ge3ef2
 wget https://github.com/JohnnyMorganz/StyLua/releases/download/v0.20.0/stylua-linux-x86_64.zip -O $SCRIPT_DIR/STYLUA_FILE
 
 
-
-
-
