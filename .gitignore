@@ -4,4 +4,6 @@ plugin/packer_compiled.lua
 lazy-lock.json
 test.lua
 test.cpp
+test.sv
 .temp
+.luarc.json

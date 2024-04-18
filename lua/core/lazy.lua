@@ -37,7 +37,15 @@ local plugins = {
 	"nvim-telescope/telescope-ui-select.nvim",
 
 	-- Linter and Formater
-  -- "nvimtools/none-ls.nvim",
+	-- "nvimtools/none-ls.nvim",
+
+	-- Completion and Snipts
+	"hrsh7th/nvim-cmp",
+	"hrsh7th/cmp-nvim-lsp",
+  {"L3MON4D3/LuaSnip", dependencies = {
+    "saadparwaiz1/cmp_luasnip",
+    "rafamadriz/friendly-snippets",
+  } },
 
 	-- Optional
 	{ "nvim-neo-tree/neo-tree.nvim", branch = "v3.x", dependencies = {
@@ -48,3 +56,4 @@ local plugins = {
 
 local opts = {}
 require("lazy").setup(plugins, opts)
+
