@@ -6,7 +6,7 @@ local opt = { noremap = true }
 -- local opt = { noremap = true, silent = true }
 
 -- Easy write and quit
-vim.keymap.set("n", "<leader>w", ":w<CR>", opt)
+vim.keymap.set("n", "<leader>w", ":w<CR>:e<CR>", opt)
 vim.keymap.set("n", "<leader>q", ":q<CR>", opt)
 
 -- Easy yank all or delete all
@@ -37,7 +37,7 @@ vim.keymap.set("n", "<leader>?", ":echo expand('%:p')<CR>", opt)
 -- Easy move between buffers
 vim.keymap.set("n", "<leader>o", ":bn<CR>")
 vim.keymap.set("n", "<leader>i", ":bp<CR>")
-vim.keymap.set("n", "<leader>x", ":bd<CR>")
+vim.keymap.set("n", "<leader>c", ":bd<CR>")
 
 -- Easy move between tabs
 vim.keymap.set("n", "<leader>O", ":tabnext<CR>")
@@ -59,7 +59,7 @@ vim.keymap.set("n", "<leader>er", ":set relativenumber!<CR>", opt)
 
 -- Enable/Disable Auto-comments,  check nvim/after/ftplugin/format.lua
 local comments_on = false
-function toggle_comments()
+function Toggle_comments()
 	if not comments_on then
 		print("Auto-comments enable.")
 		vim.cmd("setlocal formatoptions=cro")
@@ -70,14 +70,14 @@ function toggle_comments()
 	comments_on = not comments_on
 end
 
-vim.api.nvim_set_keymap("n", "<leader>ec", "<cmd>lua toggle_comments()<CR>", opt)
+vim.api.nvim_set_keymap("n", "<leader>ec", "<cmd>lua Toggle_comments()<cr>", opt)
 --vim.keymap.set('n', '<leader>dc', ':setlocal formatoptions-=cro<CR>', opt)
 --vim.keymap.set('n', '<leader>ec', ':setlocal formatoptions=cro<CR>', opt)
 
 -- Show hidden characters
 vim.cmd("set listchars=tab:>-,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»")
 local hidden_on = false
-function toggle_hidden()
+function Toggle_hidden()
 	if not hidden_on then
 		print("Hidden characters enable.")
 		vim.cmd("set list")
@@ -88,13 +88,13 @@ function toggle_hidden()
 	hidden_on = not hidden_on
 end
 
-vim.api.nvim_set_keymap("n", "<leader>eh", "<cmd>lua toggle_hidden()<CR>", opt)
+vim.api.nvim_set_keymap("n", "<leader>eh", "<cmd>lua Toggle_hidden()<CR>", opt)
 --vim.keymap.set('n', '<F9>', ":set listchars=tab:>-,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»<CR>:set list<CR>" , opt)
 --vim.keymap.set('n', '<F10>', ":set list!<CR>" , opt)
 
 -- Spell check        z=
 local spell_on = false
-function toggle_spell()
+function Toggle_spell()
 	if not spell_on then
 		print("Spellcheck enable English. For spanish use setlocal spelllang=es")
 		vim.cmd("setlocal spell spelllang=en_us")
@@ -105,7 +105,7 @@ function toggle_spell()
 	spell_on = not spell_on
 end
 
-vim.api.nvim_set_keymap("n", "<leader>es", "<cmd>lua toggle_spell()<CR>", opt)
+vim.api.nvim_set_keymap("n", "<leader>es", "<cmd>lua Toggle_spell()<CR>", opt)
 --vim.keymap.set('n', '<leader>es', ':setlocal spell spelllang=es<CR>', opt)
 --vim.keymap.set('n', '<leader>ds', ':setlocal nospell<CR>', opt)
 
@@ -184,3 +184,4 @@ vim.keymap.set("n", "<leader>5", "'T", opt)
 -- zw add to the wrong dictionary
 -- zuw remove to the wrong dictionary
 -- ]s move to next wrong spell word
+
