@@ -11,7 +11,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "texlab", "clangd", "verible", "pyright"},
+				ensure_installed = { "lua_ls", "texlab", "clangd", "verible" },
 			})
 		end,
 	},
@@ -24,7 +24,6 @@ return {
 			lspconfig.verible.setup({ capabilities = capabilities })
 			lspconfig.clangd.setup({ capabilities = capabilities })
 			lspconfig.texlab.setup({ capabilities = capabilities })
-			lspconfig.pyright.setup({ capabilities = capabilities })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, {})
