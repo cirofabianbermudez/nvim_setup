@@ -6,7 +6,7 @@ local opt = { noremap = true }
 -- local opt = { noremap = true, silent = true }
 
 -- Easy write and quit
-vim.keymap.set("n", "<leader>w", ":w<CR>:e<CR>", opt)
+vim.keymap.set("n", "<leader>w", ":w<CR>", opt)
 vim.keymap.set("n", "<leader>q", ":q<CR>", opt)
 
 -- Easy yank all or delete all

@@ -2,7 +2,7 @@ require("lfs")
 -- no function checks for errors.
 -- you should check for them
 
-function isFile(name)
+function IsFile(name)
 	if type(name) ~= "string" then
 		return false
 	end
@@ -14,14 +14,14 @@ function isFile(name)
 	return false
 end
 
-function isFileOrDir(name)
+function IsFileOrDir(name)
 	if type(name) ~= "string" then
 		return false
 	end
 	return os.rename(name, name) and true or false
 end
 
-function isDir(name)
+function IsDir(name)
 	if type(name) ~= "string" then
 		return false
 	end

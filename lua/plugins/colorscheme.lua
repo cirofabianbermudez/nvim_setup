@@ -7,7 +7,7 @@ return {
 		config.setup({
 			style = "moon",
 			comments = { italic = true },
-			keywords = { italic = true },
+			keywords = { italic = false },
 		})
 		vim.cmd.colorscheme("tokyonight")
 	end,
