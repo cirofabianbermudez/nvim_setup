@@ -153,6 +153,14 @@ Open Neovim and let lazy.nvim install all the plugins:
 nvim
 ```
 
+##  Lockfile
+
+After every **update**, the local lockfile is updated with the installed revisions. It is recommended to have this file under version control.
+
+If you use your Neovim config on multiple machines, using the lockfile, you can ensure that the same version of every plugin is installed.
+
+If you are on another machine, you can do `:Lazy restore`, to update all your plugins to the version from the lockfile.
+
 ## Spell check
 
 Inside this repository there is a `spell` directory that contains the `*.spl` and `.sug` files for English and Spanish in case you experience some problems while running the `setlocal spell spelllang=es` vim command.
