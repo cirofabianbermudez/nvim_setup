@@ -141,16 +141,10 @@ In both cases you have to to select the font Hack Nerd Font Mono in the Terminal
 > [!NOTE]  
 > If you want to install the fonts manually there is a `fonts` directory in this repository containing a `Hack.zip` file. For Windows you can decompress and install the font as any other. For Linux you have to create a `~/.fonts` directory and put the fonts there and restart the terminal. 
 
-Finally clone the repository in `C:\Users\username\AppData\Local\nvim` for Windows or in `/home/bermudez/.config/nvim` for Linux:
+Finally clone the repository in `C:\Users\username\AppData\Local\nvim` for Windows or in `/home/username/.config/nvim` for Linux:
 
 ```bash
-git clone https://github.com/cirofabianbermudez/nvim_setup.git
-```
-
-Change the name of the directory to `nvim`:
-
-```bash
-mv nvim_setup nvim
+git clone https://github.com/cirofabianbermudez/nvim.git
 ```
 
 Open Neovim and let lazy.nvim install all the plugins:
