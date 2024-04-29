@@ -1,10 +1,8 @@
 # Files
 plugin/packer_compiled.lua
 *.bak
-lazy-lock.json
 .temp
 .luarc.json
-scripts/setup_formaters.sh
 
 # Directories
 scripts/formaters/

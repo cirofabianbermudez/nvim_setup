@@ -4,11 +4,17 @@
 
 This is my personal [Neovim](https://neovim.io/) configuration, it can be used in Windows and Linux, it uses the [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager with following plugins:
 
-- Two color-schemes ([Catppuccin](https://github.com/catppuccin/nvim), [Rose Pine](https://github.com/rose-pine/neovim))
+- Colorscheme ([tokyonight](https://github.com/folke/tokyonight.nvim))
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Oil](https://github.com/stevearc/oil.nvim) 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- LSP
+  - [mason](https://github.com/williamboman/mason.nvim)
+  - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+  - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+
 
 I think these are the bare minimum plugins need it to have a very nice experience using Neovim, other functionally can be accomplish setting up internal variables or writing remaps.
 
@@ -60,17 +66,26 @@ scoop install gcc
 
 ### Linux
 
-Install Neovim using the instructions from the official Neovim [installation](https://github.com/neovim/neovim/blob/master/INSTALL.md):
+Install Neovim:
 
 ```bash
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt-get install neovim
+wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz
+tar -xzf nvim-linux64.tar.gz
+mkdir -p ~/bin
+mv nvim-linux64 ~/bin
+rm -rf nvim-linux64.tar.gz
 ```
-we are using the unstable release because the stable version has not been updated since 2022, today is 20/03/2024.
+add Neovim to the PATH in `~/.bashrc`:
+
+```bash
+export PATH=~/bin/nvim-linux64/bin:$PATH
+```
+
+Reload `~/.bashrc`
+
+```bash
+source .bashrc
+```
 
 Install [Telescope](https://github.com/nvim-telescope/telescope.nvim) dependencies [fd](https://github.com/sharkdp/fd) and [ripgrep](https://github.com/BurntSushi/ripgrep):
 
@@ -148,41 +163,41 @@ nvim
 
 Inside this repository there is a `spell` directory that contains the `*.spl` and `.sug` files for English and Spanish in case you experience some problems while running the `setlocal spell spelllang=es` vim command.
 
-## Other GUI
-
-If you are a [Neovide](https://neovide.dev/) user there is a `neovide.lua` file that selects the font and enables zoom capabilities.
-
 ## File tree
 
 This is the current file tree of the project:
 
 ```bash
 ├── README.md
-├── after
-│   └── plugin
-│       ├── barbar.lua
-│       ├── colorscheme.lua
-│       ├── lualine.lua
-│       ├── neoviode.lua
-│       ├── oil.lua
-│       ├── telescope.lua
-│       └── treesitter.lua
-├── doc
-│   ├── customide.txt
-│   ├── git_cheatsheet.txt
-│   └── tags
-├── fonts
-│   └── Hack.zip
+├── doc/
+│   ├── customide.txt
+│   ├── git_cheatsheet.txt
+│   └── tags
+├── fonts/
+│   └── Hack.zip
 ├── init.lua
-├── lazy-lock.json
-├── lua
-│   └── core
-│       ├── init.lua
-│       ├── lazy.lua
-│       ├── markdown.lua
-│       ├── remap.lua
-│       └── set.lua
-└── spell
+├── lua/
+│   ├── core/
+│   │   ├── formaters.lua
+│   │   ├── init.lua
+│   │   ├── lazy.lua
+│   │   ├── markdown.lua
+│   │   ├── remap.lua
+│   │   └── set.lua
+│   └── plugins/
+│       ├── colorscheme.lua
+│       ├── lsp.lua
+│       ├── lualine.lua
+│       ├── neotree.lua
+│       ├── oil.lua
+│       ├── telescope.lua
+│       └── treesitter.lua
+├── scripts/
+│   ├── install_formaters.sh
+│   ├── install_formaters_wind.sh
+│   ├── tree.sh
+│   └── tree_wind.sh
+└── spell/
     ├── en.utf-8.spl
     ├── en.utf-8.sug
     ├── es.utf-8.spl
@@ -208,29 +223,10 @@ Upgrading an existing installation
 winget list --name PowerShell --upgrade-available
 ```
 
-### Formaters
-
-[ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
-
-```bash
-scoop install 
-scoop install mingw-winlibs-llvm-ucrt
-```
-
-
-[Verible](https://github.com/chipsalliance/verible)
-
-
-[Stylua](https://github.com/JohnnyMorganz/StyLua)
-
-
-Do not forget to put the executable in the PATH or System Environment Variables on Windows.
-
 
 ## Project status
 
 - [x] This configuration was tested on a Windows 10/11 machine using [Powershell](https://github.com/PowerShell/PowerShell) and [Terminal](https://github.com/microsoft/terminal).
 
 - [x] This configuration was tested on a WSL Ubuntu 22.04.4 LTS using [Terminal](https://github.com/microsoft/terminal).
-
 
