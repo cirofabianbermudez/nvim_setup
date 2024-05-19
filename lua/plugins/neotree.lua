@@ -10,8 +10,8 @@ return {
 		local config = require("neo-tree")
 		config.setup({
 			window = {
-				width = 30,
-				auto_expand_width = true,
+				width = 28,
+				auto_expand_width = false,
 			},
 		})
 		vim.keymap.set("n", "<leader>nt", ":Neotree filesystem reveal left<CR>", { silent = true })

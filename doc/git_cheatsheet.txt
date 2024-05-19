@@ -19,7 +19,7 @@ Column heading~
 Setup:                                                    *git.cheat.setup*
   Configuring user information used across all local repositories 
 
-    Set a name that is identifiable for credit when review version history ]
+    Set a name that is identifiable for credit when review version history >
       git config --global user.name "[username]"
 <
     Set an email address that will be associated with each history marker >
