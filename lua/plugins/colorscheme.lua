@@ -7,7 +7,7 @@ return {
     config.setup({
       transparent = true,
       styles = {
-        comments = { italic = true },
+        comments = { italic = false },
         keywords = { italic = false },
         functions = {},
         variables = {},
