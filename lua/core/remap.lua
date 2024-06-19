@@ -8,6 +8,7 @@ local opt = { noremap = true }
 -- Easy write and quit
 vim.keymap.set("n", "<leader>w", ":w<CR>", opt)
 vim.keymap.set("n", "<leader>q", ":q<CR>", opt)
+vim.keymap.set("n", "<leader>W", ":wa<CR>", opt)
 
 -- Easy yank all or delete all
 vim.keymap.set("n", "<leader>gy", ":%y+<CR>", opt)
