@@ -159,6 +159,9 @@ vim.keymap.set("n", "<leader>3", "'E", opt)
 vim.keymap.set("n", "<leader>4", "'R", opt)
 vim.keymap.set("n", "<leader>5", "'T", opt)
 
+-- Fast mask
+vim.keymap.set("n", "<C-p>", "mA", opt)
+
 -- Open init.lua 'V read about vim marks for more reference
 -- mV to mark
 
