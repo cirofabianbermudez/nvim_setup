@@ -10,10 +10,6 @@ This is my personal [Neovim](https://neovim.io/) configuration, it can be used i
 - [Oil](https://github.com/stevearc/oil.nvim) 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
-- LSP
-  - [mason](https://github.com/williamboman/mason.nvim)
-  - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
-  - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 
 
 I think these are the bare minimum plugins need it to have a very nice experience using Neovim, other functionally can be accomplish setting up internal variables or writing remaps.

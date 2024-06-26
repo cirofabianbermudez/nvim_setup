@@ -35,6 +35,15 @@ Init:                                                    *git.cheat.init*
   Initialize an existing directory as a Git repository >
     git init
 <
+  Change the branch name >
+    git branch -M main
+<
+  Add the remote to the project >
+    git remote add origin git@github.com:username/repo_name.git
+<
+  Push to the remote and set the default upstream >
+    git push -u origin main 
+<
   Retrieve an entire repository from a hosted location via URL >
     git clone [url]
 <
@@ -50,6 +59,8 @@ Stage and snapshot:                                    *git.cheat.snapshot*
 <
   Unstage a file while retaining the changes in working directory >
     git reset [file]
+    git reset HEAD [file]
+    git restore --staged [file]
 <
   Diff of what is changed but not staged >
     git diff
@@ -64,7 +75,7 @@ Stage and snapshot:                                    *git.cheat.snapshot*
 Branch and Merge:                                *git.cheat.branch*
   Isolating work in branches, changing context, and integrating changes
 
-  List your branches. a * will appear next to the currently active branch >
+  List your branches, a * will appear next to the currently active branch >
     git branch
 <
   Create a new branch at the current commit >
@@ -169,6 +180,52 @@ Ignoring Patterns:                             *git.cheat.ignore*
 
   Save a file with desired patterns as .gitignore with either direct string
   matches or wildcard globs.
+
+
+Manage multiple SSH keys                         *git.cheat.ssh*
+  Create, configure and manage SSH keys
+
+  Create a new SSH key pair, use meaningful names like `id_ed25519_github` >
+    cd ~/.ssh
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+<
+  Create a `~/.ssh/config` file >
+    cd ~/.ssh
+    touch config
+<
+  Configuration example >
+    # GitHub account
+    Host github.com
+      Hostname github.com
+      PreferredAuthentications publickey
+      IdentityFile ~/.ssh/id_ed25519_github
+
+    # GitLab account
+      Host gitlab.com
+      Hostname gitlab.com
+      PreferredAuthentications publickey
+      IdentityFile ~/.ssh/id_ed25519_gitlab
+<
+  Test the configuration >
+    ssh -T git@github.com
+    git clone git@github.com:username/dummy_repository_github.git
+<
+  For multiple GitHub accounts >
+    # GitHub account
+    Host personal-github.com
+      Hostname github.com
+      PreferredAuthentications publickey
+      IdentityFile ~/.ssh/id_ed25519_github_personal
+
+    # GitLab account
+    Host github.com
+      Hostname github.com
+      PreferredAuthentications publickey
+      IdentityFile ~/.ssh/id_ed25519_github_work
+<
+  When cloning ajust the command >
+    git clone git@personal-gitub.com:username/dummy_repository_github.git
+<
 
 Note:
   Create the tags file using `:helptags ../doc`
