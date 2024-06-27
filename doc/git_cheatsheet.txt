@@ -116,8 +116,15 @@ Share and Update:                                  *git.cheat.update*
   Add a git URL as an alias >
     git remote add [alias] [url]
 <
-  Fetch down all the branches from that Git remote >
+  Fetch down all the branches from that Git remote (one remote) >
     git fetch [alias]
+<
+  See the changes >
+    git diff origin/main
+    git diff HEAD origin/main
+<
+  Accept the remote changes >
+    git merge origin/main
 <
   Merge a remote branch into your current branch to bring it up to date >
     git merge [alias]/[branch]
@@ -127,6 +134,9 @@ Share and Update:                                  *git.cheat.update*
 <
   Fetch and merge any commits from the tracking remote branch >
     git pull
+<
+  Update all remote-tracking branches for all remotes (multiple remotes) >
+    git remote update
 <
 
 Tracking Path Changes:                             *git.cheat.tracking*
@@ -158,14 +168,26 @@ Temporary Commits:                                *git.cheat.temporary*
   Save modified and staged changes >
     git stash
 <
+  Save modified and staged changes and also untracked >
+    git stash -u
+<
   List stack-order of stashed file changes >
     git stash list
 <
   Write working from top of stash stack >
     git stash pop
 <
+  Write working from top of stash stack but and keep it in stash >
+    git stash apply
+<
+  Write working from top of stash stack but and keep it in stash specific >
+    git stash apply [stash@{0}]
+<
   Discard the changes from top of stash stack >
     git stash drop
+<
+  Discard all stashes >
+    git stash clear
 <
 
 Ignoring Patterns:                             *git.cheat.ignore*
