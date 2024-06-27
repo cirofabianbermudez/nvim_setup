@@ -11,7 +11,6 @@ This is my personal [Neovim](https://neovim.io/) configuration, it can be used i
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 
-
 I think these are the bare minimum plugins need it to have a very nice experience using Neovim, other functionally can be accomplish setting up internal variables or writing remaps.
 
 After installation, inside Neovim run this command to see the custom remaps:
